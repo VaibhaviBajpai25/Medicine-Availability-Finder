@@ -192,13 +192,13 @@ Possible database entities include:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/medicine-availability-finder.git
+https://github.com/VaibhaviBajpai25/Medicine-Availability-Finder
 ```
 
 ### 2. Navigate to the Project Directory
 
 ```bash
-cd medicine-availability-finder
+cd Medicine-Availability-Finder
 ```
 
 ### 3. Install Dependencies
