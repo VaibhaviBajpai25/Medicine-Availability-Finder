@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5fbfa">
+  <meta name="description" content="Review pharmacy applications for Medi Finder.">
+  <title>Pharmacy approvals — Medi Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+  <script defer src="js/admin.js"></script>
+</head>
+<body>
+  <header class="site-header"><nav class="nav-shell container" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="Medi Finder home"><img src="images/logo.svg" alt="" width="38" height="38"><span>Medi<span class="brand-accent">Finder</span></span></a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="primary-nav"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="medicines.html">Medicines</a><a class="nav-link active" href="admin.html">Approvals</a></div>
+  </nav></header>
+  <main class="page-main">
+    <section class="page-banner"><div class="container page-banner-content"><div><p class="eyebrow eyebrow-dark">Administrator</p><h1>Pharmacy <span>applications.</span></h1><p>Review submitted pharmacy details before their medicine listings become public.</p></div><div class="banner-mark" aria-hidden="true"><span>✓</span><i></i><b></b></div></div></section>
+    <section class="container admin-content">
+      <div class="inventory-notice"><span class="notice-symbol">i</span><p><strong>Verify before approving.</strong> Review the pharmacy and its license/registration details independently. Medi Finder does not validate license numbers automatically.</p></div>
+      <section class="profile-card admin-login-card" id="admin-login-card"><div class="profile-card-heading"><div><p class="eyebrow eyebrow-dark">Restricted access</p><h3>Administrator sign in</h3></div></div><div class="form-message" id="admin-login-message" role="status" aria-live="polite"></div><form id="admin-login-form" novalidate><label class="form-label" for="admin-email">Admin email</label><input class="form-control" id="admin-email" type="email" autocomplete="username" required><label class="form-label" for="admin-password">Admin password</label><input class="form-control" id="admin-password" type="password" autocomplete="current-password" required><button class="button button-primary inventory-submit" type="submit">Sign in <span aria-hidden="true">→</span></button></form></section>
+      <section class="admin-queue" id="admin-queue" hidden><div class="profile-card-heading"><div><p class="eyebrow eyebrow-dark">Review queue</p><h2>Pending pharmacies</h2></div><button class="button button-quiet" id="admin-logout" type="button">Log out</button></div><div class="form-message" id="admin-queue-message" role="status" aria-live="polite"></div><div class="admin-applications" id="admin-applications"><p class="list-empty">Loading applications…</p></div></section>
+    </section>
+  </main>
+  <footer class="site-footer compact-footer"><div class="container footer-bottom"><span>© <span data-current-year></span> Medi Finder</span><span>Admin credentials are configured in the server’s local .env file.</span><a href="index.html">Back to home ↑</a></div></footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5fbfa">
+  <meta name="description" content="Search approved pharmacy medicine listings by name and PIN code.">
+  <title>Find medicines — Medi Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+  <script defer src="js/medicines.js"></script>
+</head>
+<body>
+  <header class="site-header"><nav class="nav-shell container" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="Medi Finder home"><img src="images/logo.svg" alt="" width="38" height="38"><span>Medi<span class="brand-accent">Finder</span></span></a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="primary-nav"><a class="nav-link" href="index.html">Home</a><a class="nav-link active" href="medicines.html">Medicines</a><a class="nav-link" href="login.html">Login</a><a class="nav-link" href="signup.html">Sign up</a><a class="nav-profile" href="profile.html"><span class="profile-dot" aria-hidden="true">↗</span> My profile</a></div>
+  </nav></header>
+  <main class="page-main">
+    <section class="page-banner"><div class="container page-banner-content"><div><p class="eyebrow eyebrow-dark">Medicine discovery</p><h1>Find what you need, <span>closer to home.</span></h1><p>Search pharmacy-submitted listings in your PIN region. Always call to confirm availability.</p></div><div class="banner-mark" aria-hidden="true"><span>+</span><i></i><b></b></div></div></section>
+    <section class="container results-layout">
+      <div class="results-search-panel">
+        <form class="results-search search-form" id="medicine-search" action="medicines.html" method="get">
+          <label><span class="input-label">Medicine name</span><span class="input-wrap"><span aria-hidden="true">⌕</span><input type="search" id="medicine-query" name="medicine" placeholder="e.g. Paracetamol" autocomplete="off" required></span></label>
+          <label><span class="input-label">Your PIN code</span><span class="input-wrap"><span aria-hidden="true">⌖</span><input type="text" id="pin-query" name="pin" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" placeholder="6-digit PIN" required></span></label>
+          <button class="button button-primary" type="submit">Search <span aria-hidden="true">→</span></button>
+        </form>
+      </div>
+      <div class="inventory-notice"><span class="notice-symbol">i</span><p><strong>Pharmacy-submitted information:</strong> listings are provided by approved pharmacy accounts. Demo records are examples only, not real stores or verified stock. Stock and prices may change; please contact a real pharmacy before relying on a listing.</p></div>
+      <div class="results-heading"><div><p class="eyebrow eyebrow-dark">Your search</p><h2 id="results-title">Explore pharmacy listings</h2></div><span class="result-count" id="result-count">Search to see results</span></div>
+      <div class="results-layout-inner">
+        <aside class="filter-panel" aria-label="Filter results">
+          <div class="filter-title"><h3>Refine results</h3><button class="reset-filters" id="reset-filters" type="button">Reset</button></div>
+          <label class="filter-label" for="category-filter">Category</label>
+          <select class="select-control" id="category-filter"><option value="">All categories</option><option>Pain relief</option><option>Allergy</option><option>Antibiotic</option><option>Vitamins</option><option>Hydration</option></select>
+          <label class="filter-label" for="availability-filter">Availability</label>
+          <select class="select-control" id="availability-filter"><option value="">All listings</option><option value="available">In stock</option><option value="unavailable">Out of stock</option></select>
+          <div class="filter-range-heading"><label class="filter-label" for="price-filter">Maximum price</label><output id="price-output" for="price-filter">₹1,000</output></div>
+          <input class="range-control" id="price-filter" type="range" min="0" max="1000" step="10" value="1000">
+          <div class="range-labels"><span>₹0</span><span>₹1,000+</span></div>
+          <div class="filter-footnote"><span aria-hidden="true">✦</span><p>Listings come from approved pharmacies in the same 3-digit PIN region. Exact distance isn’t available.</p></div>
+        </aside>
+        <section class="results-list" aria-live="polite" aria-label="Medicine search results">
+          <div id="medicine-results" class="medicine-results"></div>
+          <div class="empty-state" id="empty-state" hidden><div class="empty-illustration" aria-hidden="true">⌕</div><h3>No matching listings yet</h3><p>Try another medicine name, check your PIN code, or adjust the filters.</p><a class="button button-outline" href="medicines.html">Start a new search</a></div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer compact-footer"><div class="container footer-bottom"><span>© <span data-current-year></span> Medi Finder</span><span>Stock and prices are pharmacy-reported; please verify with the pharmacy.</span><a href="index.html">Back to home ↑</a></div></footer>
+</body>
+</html>

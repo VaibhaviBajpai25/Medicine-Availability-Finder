@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140" role="img" aria-label="Illustration of a medicine box">
+  <defs>
+    <linearGradient id="box" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#edf6f1"/>
+    </linearGradient>
+  </defs>
+  <path d="M28 20h54l12 12v87H28z" fill="#dbeae3" opacity=".8"/>
+  <path d="M20 14h57l13 13v91H20z" fill="url(#box)" stroke="#d7e7df" stroke-width="2"/>
+  <path d="M77 14v14h13" fill="#e1eee8" stroke="#d7e7df" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="20" y="47" width="70" height="31" rx="3" fill="#258d7c"/>
+  <path d="M55 54v17M46.5 62.5h17" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  <text x="55" y="92" text-anchor="middle" fill="#456562" font-family="Arial,sans-serif" font-size="7" font-weight="700" letter-spacing="1">MEDICINE</text>
+  <path d="M32 101h46M32 107h34" stroke="#cfdfd8" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="82" cy="102" r="8" fill="#f3c6a9"/>
+</svg>

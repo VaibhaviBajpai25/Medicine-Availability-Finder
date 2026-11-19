@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5fbfa">
+  <meta name="description" content="Manage pharmacy inventory and stock history in Medi Finder.">
+  <title>Pharmacy dashboard — Medi Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+  <script defer src="js/pharmacy.js"></script>
+</head>
+<body>
+  <header class="site-header"><nav class="nav-shell container" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="Medi Finder home"><img src="images/logo.svg" alt="" width="38" height="38"><span>Medi<span class="brand-accent">Finder</span></span></a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="primary-nav"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="medicines.html">Find medicines</a><a class="nav-link active" href="pharmacy.html">Pharmacy dashboard</a></div>
+  </nav></header>
+  <main class="page-main pharmacy-dashboard">
+    <section class="page-banner"><div class="container page-banner-content"><div><p class="eyebrow eyebrow-dark">Pharmacy workspace</p><h1>Your stock, <span>at a glance.</span></h1><p>Keep your medicine listings and stock updates organized in one place.</p></div><div class="banner-mark" aria-hidden="true"><span>✚</span><i></i><b></b></div></div></section>
+    <section class="container dashboard-content">
+      <div class="dashboard-welcome"><div><p class="eyebrow eyebrow-dark">Supplier dashboard</p><h2 id="pharmacy-name">Your pharmacy</h2><p id="pharmacy-location">Loading pharmacy details…</p></div><span class="approval-badge" id="approval-status">Checking status…</span></div>
+      <div class="inventory-notice approval-notice" id="approval-notice" hidden><span class="notice-symbol">i</span><p id="approval-message"></p></div>
+      <div class="form-message dashboard-message" id="dashboard-message" role="status" aria-live="polite"></div>
+      <div class="stat-grid">
+        <article class="stat-card"><span class="stat-icon">▤</span><p>Medicine listings</p><strong id="stat-medicines">0</strong><small>Products in your catalogue</small></article>
+        <article class="stat-card"><span class="stat-icon stat-icon-mint">▦</span><p>Current stock</p><strong id="stat-units">0</strong><small>Total units on hand</small></article>
+        <article class="stat-card"><span class="stat-icon stat-icon-peach">↗</span><p>Units supplied</p><strong id="stat-supplied">0</strong><small>Recorded stock additions</small></article>
+      </div>
+      <div class="supplier-layout">
+        <section class="profile-card inventory-form-card">
+          <div class="profile-card-heading"><div><p class="eyebrow eyebrow-dark">Add to your catalogue</p><h3>List a medicine</h3></div><span class="list-count">Stock stays private until approval</span></div>
+          <form id="inventory-form" novalidate>
+            <label class="form-label" for="inventory-name">Medicine name</label><input class="form-control" id="inventory-name" name="name" maxlength="120" placeholder="e.g. Paracetamol 500 mg" required>
+            <div class="form-row"><div><label class="form-label" for="inventory-manufacturer">Manufacturer</label><input class="form-control" id="inventory-manufacturer" name="manufacturer" maxlength="120" placeholder="Manufacturer name" required></div><div><label class="form-label" for="inventory-category">Category</label><select class="form-control" id="inventory-category" name="category" required><option value="">Choose category</option><option>Pain relief</option><option>Allergy</option><option>Antibiotic</option><option>Vitamins</option><option>Hydration</option><option>Other</option></select></div></div>
+            <div class="form-row"><div><label class="form-label" for="inventory-price">Price (₹)</label><input class="form-control" id="inventory-price" name="price" type="number" min="0" max="1000000" step="0.01" placeholder="0.00" required></div><div><label class="form-label" for="inventory-quantity">Starting stock (units)</label><input class="form-control" id="inventory-quantity" name="quantity" type="number" min="0" max="1000000" step="1" placeholder="0" required></div></div>
+            <button class="button button-primary button-full inventory-submit" type="submit">Add medicine <span aria-hidden="true">→</span></button>
+          </form>
+          <p class="auth-disclaimer">Only list products you are authorized to supply. Stock is pharmacy-reported and should be updated promptly.</p>
+        </section>
+        <section class="profile-card stock-history-card"><div class="profile-card-heading"><div><p class="eyebrow eyebrow-dark">Your latest activity</p><h3>Stock history</h3></div><span class="list-count" id="history-count">0 updates</span></div><div class="stock-history-list" id="stock-history"><p class="list-empty">Loading stock activity…</p></div></section>
+      </div>
+      <section class="profile-card inventory-list-card"><div class="profile-card-heading"><div><p class="eyebrow eyebrow-dark">Your products</p><h3>Medicine inventory</h3></div><span class="list-count" id="inventory-count">0 medicines</span></div><div class="inventory-table-wrap"><table class="inventory-table"><thead><tr><th>Medicine</th><th>Category</th><th>Price</th><th>Units in stock</th><th>Update stock</th></tr></thead><tbody id="inventory-rows"><tr><td colspan="5" class="table-empty">Your medicine listings will appear here.</td></tr></tbody></table></div></section>
+    </section>
+  </main>
+  <footer class="site-footer compact-footer"><div class="container footer-bottom"><span>© <span data-current-year></span> Medi Finder</span><span>Inventory is pharmacy-reported; public listings require pharmacy approval.</span><a href="index.html">Back to home ↑</a></div></footer>
+</body>
+</html>
