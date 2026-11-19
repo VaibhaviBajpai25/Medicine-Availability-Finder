@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#faf5ef">
+    <meta name="description" content="Your personal MediFinder dashboard.">
+    <title>Your dashboard — MediFinder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dashboard-page">
+    <header class="dashboard-header">
+        <a class="brand" href="index.html" aria-label="MediFinder home">
+            <span class="brand-mark" aria-hidden="true">+</span>
+            <span>Medi<span>Finder</span></span>
+        </a>
+        <nav class="dashboard-nav" aria-label="Dashboard navigation">
+            <a class="dashboard-nav-active" href="#overview">Overview</a>
+            <a href="#account">My profile</a>
+            <a href="index.html#medicines">Medicines</a>
+            <a href="seller.html">For pharmacies</a>
+        </nav>
+        <a class="dashboard-home-link" href="index.html">Explore MediFinder <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main class="dashboard-main">
+        <section class="dashboard-welcome" id="overview">
+            <div>
+                <span class="dashboard-eyebrow"><span class="dashboard-live-dot"></span> YOUR PERSONAL SPACE</span>
+                <h1>Welcome, <span id="welcomeName">there</span>.</h1>
+                <p>Your care tools and profile details, together in one place.</p>
+            </div>
+            <a class="dashboard-edit-link" href="profile.html"><span aria-hidden="true">✎</span> Edit profile</a>
+        </section>
+
+        <section class="dashboard-3d-stage" aria-label="Your three-dimensional care dashboard">
+            <div class="dashboard-scene">
+                <div class="scene-orbit scene-orbit-one" aria-hidden="true"></div>
+                <div class="scene-orbit scene-orbit-two" aria-hidden="true"></div>
+                <div class="scene-glow" aria-hidden="true"></div>
+                <div class="scene-platform" aria-hidden="true"></div>
+                <article class="scene-card scene-card-main tilt-surface">
+                    <div class="scene-card-top">
+                        <span class="scene-icon" aria-hidden="true">✚</span>
+                        <span class="scene-label">MEDIFINDER MEMBER</span>
+                        <span class="scene-status"><span></span> ACTIVE</span>
+                    </div>
+                    <div class="scene-profile">
+                        <span class="scene-avatar" id="profileInitials" aria-hidden="true">MF</span>
+                        <div><span class="scene-small-label">WELCOME BACK</span><strong id="sceneName">Your profile</strong></div>
+                    </div>
+                    <div class="scene-id-block">
+                        <span class="scene-small-label">YOUR UNIQUE USER ID</span>
+                        <strong id="sceneUserId">MF-0000-0000000000000000</strong>
+                    </div>
+                    <div class="scene-card-footer"><span>Profile created</span><strong id="createdDate">—</strong></div>
+                </article>
+                <div class="scene-float scene-float-top" aria-hidden="true"><span>✦</span> Your care, organized</div>
+                <div class="scene-float scene-float-bottom" aria-hidden="true"><span class="scene-float-dot"></span> A little closer to care</div>
+            </div>
+            <aside class="dashboard-intro-card">
+                <span class="dashboard-eyebrow">YOUR MEDIFINDER ID</span>
+                <figure class="dashboard-photo">
+                    <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Medicines arranged for a clear view of available treatments" loading="lazy" decoding="async">
+                    <figcaption>Find nearby care with confidence</figcaption>
+                </figure>
+                <h2>Care, in your corner.</h2>
+                <p>Your personal ID helps you recognize your profile on this device. This demo keeps profile details in your browser only.</p>
+                <div class="id-copy-row">
+                    <code id="dashboardUserId">MF-0000-0000000000000000</code>
+                    <button id="copyUserId" type="button" aria-label="Copy your MediFinder ID">Copy</button>
+                </div>
+                <p class="dashboard-message" id="dashboardMessage" role="status" aria-live="polite"></p>
+            </aside>
+        </section>
+
+        <section class="dashboard-cards" aria-label="Dashboard overview">
+            <article class="overview-card overview-card-profile tilt-surface">
+                <span class="overview-icon" aria-hidden="true">☺</span>
+                <span class="overview-label">PROFILE</span>
+                <strong id="overviewName">Your profile</strong>
+                <span class="overview-detail" id="overviewEmail">Your email address</span>
+            </article>
+            <article class="overview-card tilt-surface">
+                <span class="overview-icon overview-icon-coral" aria-hidden="true">♡</span>
+                <span class="overview-label">SAVED MEDICINES</span>
+                <strong id="savedMedicineCount">00</strong>
+                <a class="overview-detail overview-link" href="index.html#medicines">Explore your saved list <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="overview-card tilt-surface">
+                <span class="overview-icon overview-icon-blue" aria-hidden="true">⌖</span>
+                <span class="overview-label">PHARMACY EXAMPLES</span>
+                <strong>03</strong>
+                <span class="overview-detail">Sample listings on MediFinder</span>
+            </article>
+        </section>
+
+        <section class="account-panel" id="account" aria-labelledby="accountTitle">
+            <div class="account-heading">
+                <div><span class="dashboard-eyebrow">YOUR DETAILS</span><h2 id="accountTitle">Profile at a glance</h2></div>
+                <a class="dashboard-edit-link" href="profile.html">Update details <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="account-details">
+                <div><span>Full name</span><strong id="accountName">—</strong></div>
+                <div><span>Email address</span><strong id="accountEmail">—</strong></div>
+                <div><span>Phone number</span><strong id="accountPhone">—</strong></div>
+                <div><span>City or area</span><strong id="accountArea">Not added</strong></div>
+            </div>
+            <p class="dashboard-disclaimer">MediFinder demo listings are examples only. Confirm medicine availability and pharmacy hours directly with the pharmacy.</p>
+        </section>
+    </main>
+    <footer class="dashboard-footer">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">+</span><span>Medi<span>Finder</span></span></a>
+        <span>Profile details are stored in this browser for this demo.</span>
+    </footer>
+    <script src="dashboard.js"></script>
+</body>
+</html>

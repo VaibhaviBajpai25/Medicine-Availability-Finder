@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#faf5ef">
+    <meta name="description" content="Log in to MediFinder to find nearby medicine and pharmacy information.">
+    <title>Log in — MediFinder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body class="login-page">
+    <header class="login-header">
+        <a class="brand" href="index.html" aria-label="MediFinder home">
+            <span class="brand-mark" aria-hidden="true">+</span>
+            <span>Medi<span>Finder</span></span>
+        </a>
+        <nav class="journey-nav" aria-label="MediFinder pages">
+            <a href="index.html">Home</a>
+            <a href="profile.html">Create profile</a>
+            <a href="seller.html">For pharmacies</a>
+        </nav>
+    </header>
+
+    <main class="login-layout">
+        <section class="login-copy">
+            <span class="eyebrow"><span class="live-dot"></span> CARE, CLOSER TO YOU</span>
+            <h1>A healthier day starts with <span>one less worry.</span></h1>
+            <p>Find what you need, discover care close by, and make your next step a little easier.</p>
+            <div class="login-benefits">
+                <div><span class="benefit-icon" aria-hidden="true">⌕</span><span><strong>Find medicines</strong><small>Search the essentials with ease</small></span><span class="benefit-arrow" aria-hidden="true">↗</span></div>
+                <div><span class="benefit-icon" aria-hidden="true">⌖</span><span><strong>Explore nearby</strong><small>See pharmacies around you</small></span><span class="benefit-arrow" aria-hidden="true">↗</span></div>
+                <div><span class="benefit-icon" aria-hidden="true">◷</span><span><strong>Feel in the know</strong><small>Check useful availability details</small></span><span class="benefit-arrow" aria-hidden="true">↗</span></div>
+            </div>
+            <figure class="login-photo">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Stethoscope and laptop on a healthcare professional's desk" loading="lazy" decoding="async">
+                <figcaption>Helpful care starts with good information.</figcaption>
+            </figure>
+            <div class="login-orbit orbit-a"></div><div class="login-orbit orbit-b"></div>
+            <div class="login-decoration" aria-hidden="true"><span>+</span></div>
+        </section>
+
+        <section class="login-card" aria-labelledby="login-title">
+            <div class="login-card-heading">
+                <div class="login-symbol" aria-hidden="true"><span>+</span></div>
+                <span class="eyebrow">WELCOME BACK</span>
+                <h2 id="login-title">Log in to MediFinder</h2>
+                    <p>Continue to your personal care dashboard.</p>
+            </div>
+            <form id="loginForm">
+                <label class="input-group" for="email">
+                    <span>Email address</span>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+                </label>
+                <label class="input-group" for="password">
+                    <span>Password</span>
+                    <span class="password-field">
+                        <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" required>
+                        <button class="password-toggle" id="togglePassword" type="button" aria-label="Show password" aria-pressed="false">Show</button>
+                    </span>
+                </label>
+                <div class="login-options">
+                    <label class="remember-option"><input type="checkbox" id="remember" name="remember"><span>Remember me</span></label>
+                    <button class="text-button" type="button" id="forgotPassword">Forgot password?</button>
+                </div>
+                <button type="submit" class="login-button">Log in <span aria-hidden="true">→</span></button>
+            </form>
+            <p class="login-message" id="message" role="status" aria-live="polite"></p>
+            <div class="login-divider"><span>OR</span></div>
+            <button type="button" class="guest-button" id="guestLogin">Set up a profile as guest <span aria-hidden="true">↗</span></button>
+            <p class="login-footnote">New to MediFinder? <a href="profile.html">Create your profile</a></p>
+            <p class="login-footnote">Own a pharmacy? <a href="seller.html">Register as a seller</a></p>
+            <p class="auth-note">Demo only: authentication is not connected. Your password is never saved; profile details stay in this browser.</p>
+        </section>
+    </main>
+    <script src="login.js"></script>
+</body>
+</html>

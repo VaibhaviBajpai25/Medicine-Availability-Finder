@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#faf5ef">
+    <meta name="description" content="Create your MediFinder profile and personal user ID.">
+    <title>Create your profile — MediFinder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body class="login-page">
+    <header class="login-header">
+        <a class="brand" href="index.html" aria-label="MediFinder home">
+            <span class="brand-mark" aria-hidden="true">+</span>
+            <span>Medi<span>Finder</span></span>
+        </a>
+        <nav class="journey-nav" aria-label="MediFinder pages">
+            <a href="index.html">Home</a>
+            <a href="login.html">Sign in</a>
+            <a href="seller.html">For pharmacies</a>
+        </nav>
+    </header>
+
+    <main class="login-layout profile-layout">
+        <section class="login-copy profile-copy">
+            <span class="eyebrow"><span class="live-dot"></span> YOUR PROFILE, YOUR CARE</span>
+            <h1>A little about <span>you.</span></h1>
+            <p>Create a profile to get a unique MediFinder ID and a dashboard that keeps your care tools together.</p>
+            <div class="profile-preview" aria-label="Your profile setup includes">
+                <img class="profile-photo" src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Healthcare team working together in a clinic" loading="lazy" decoding="async">
+                <div class="preview-orbit" aria-hidden="true"></div>
+                <div class="preview-card">
+                    <span class="preview-mark" aria-hidden="true">+</span>
+                    <span class="preview-label">YOUR MEDIFINDER ID</span>
+                    <strong>MF-2026-••••••••</strong>
+                    <span class="preview-caption">Created when you save your profile</span>
+                </div>
+                <div class="preview-note"><span aria-hidden="true">✦</span> A personal space for your care</div>
+            </div>
+        </section>
+
+        <section class="login-card profile-card" aria-labelledby="profile-title">
+            <div class="login-card-heading">
+                <div class="login-symbol" aria-hidden="true"><span>+</span></div>
+                <span class="eyebrow">PROFILE SETUP</span>
+                <h2 id="profile-title">Tell us about yourself</h2>
+                <p>Your user ID is generated automatically.</p>
+            </div>
+            <form id="profileForm">
+                <div class="profile-fields">
+                    <label class="input-group profile-field-full" for="fullName">
+                        <span>Full name</span>
+                        <input type="text" id="fullName" name="name" placeholder="Your name" autocomplete="name" maxlength="80" required>
+                    </label>
+                    <label class="input-group profile-field-full" for="profileEmail">
+                        <span>Email address</span>
+                        <input type="email" id="profileEmail" name="email" placeholder="you@example.com" autocomplete="email" maxlength="254" required>
+                    </label>
+                    <label class="input-group" for="phone">
+                        <span>Phone number</span>
+                        <input type="tel" id="phone" name="phone" placeholder="Your phone number" autocomplete="tel" maxlength="30" required>
+                    </label>
+                    <label class="input-group" for="dateOfBirth">
+                        <span>Date of birth <small>(optional)</small></span>
+                        <input type="date" id="dateOfBirth" name="dateOfBirth" autocomplete="bday">
+                    </label>
+                    <label class="input-group profile-field-full" for="area">
+                        <span>City or area <small>(optional)</small></span>
+                        <input type="text" id="area" name="area" placeholder="Your city or area" autocomplete="address-level2" maxlength="100">
+                    </label>
+                </div>
+                <p class="profile-privacy">Your profile is saved only in this browser for this demo. Avoid entering sensitive medical information.</p>
+                <button type="submit" class="login-button">Save profile &amp; create my ID <span aria-hidden="true">→</span></button>
+            </form>
+            <p class="login-message" id="profileMessage" role="status" aria-live="polite"></p>
+            <p class="login-footnote profile-footnote">Already have your profile? <a href="dashboard.html">Go to your dashboard</a></p>
+            <p class="login-footnote profile-footnote"><a href="index.html">Continue without a profile</a></p>
+        </section>
+    </main>
+    <script src="profile.js"></script>
+</body>
+</html>

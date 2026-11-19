@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#faf5ef">
+    <meta name="description" content="Create a MediFinder pharmacy profile and manage your medicine stock.">
+    <title>Pharmacy seller registration — MediFinder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="seller.css">
+</head>
+<body class="login-page seller-page">
+    <header class="login-header">
+        <a class="brand" href="index.html" aria-label="MediFinder home">
+            <span class="brand-mark" aria-hidden="true">+</span>
+            <span>Medi<span>Finder</span></span>
+        </a>
+        <nav class="journey-nav" aria-label="MediFinder pages">
+            <a href="index.html">Home</a>
+            <a href="login.html">Sign in</a>
+            <a href="profile.html">Create profile</a>
+        </nav>
+    </header>
+
+    <main class="seller-main">
+        <section class="seller-layout" aria-label="MediFinder pharmacy seller registration">
+            <div class="seller-copy">
+                <span class="eyebrow"><span class="live-dot"></span> FOR INDEPENDENT PHARMACIES</span>
+                <h1>Good care starts <span>at your counter.</span></h1>
+                <p>Set up your pharmacy profile, get a shop reference, and keep your medicine availability and prices up to date.</p>
+
+                <div class="seller-scene" aria-label="Preview of a pharmacy listing">
+                    <div class="seller-orbit seller-orbit-one" aria-hidden="true"></div>
+                    <div class="seller-orbit seller-orbit-two" aria-hidden="true"></div>
+                    <div class="seller-platform" aria-hidden="true"></div>
+                    <figure class="seller-photo-card">
+                        <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&amp;fit=crop&amp;w=800&amp;q=85" alt="Assorted pharmacy medicines arranged for inventory" loading="lazy" decoding="async">
+                        <figcaption>Stock, thoughtfully managed</figcaption>
+                    </figure>
+                    <article class="seller-preview-card">
+                        <div class="seller-preview-top"><span class="seller-preview-icon" aria-hidden="true">✚</span><span class="seller-preview-status"><span></span> YOUR SHOP</span></div>
+                        <span class="seller-preview-label">PHARMACY PROFILE</span>
+                        <strong>Your shop, easier to find.</strong>
+                        <div class="preview-stock"><span class="preview-stock-dot"></span><span>Stock &amp; prices<br><b>Managed by you</b></span><span aria-hidden="true">↗</span></div>
+                    </article>
+                    <div class="seller-float seller-float-top"><span aria-hidden="true">✦</span> Local care, connected</div>
+                    <div class="seller-float seller-float-bottom"><span aria-hidden="true">⌖</span> More visible nearby</div>
+                </div>
+
+                <div class="seller-benefits">
+                    <div><span aria-hidden="true">01</span><p><strong>Create a shop profile</strong><small>Get a unique shop reference for this demo.</small></p></div>
+                    <div><span aria-hidden="true">02</span><p><strong>Manage your own stock</strong><small>Set available quantities and prices.</small></p></div>
+                </div>
+            </div>
+
+            <section class="login-card seller-card" id="sellerRegistration" aria-labelledby="sellerTitle">
+                <div class="login-card-heading">
+                    <div class="login-symbol" aria-hidden="true"><span>✚</span></div>
+                    <span class="eyebrow">PHARMACY ONBOARDING</span>
+                    <h2 id="sellerTitle">Register your shop</h2>
+                    <p>Create a seller profile to start managing your listings.</p>
+                </div>
+                <form id="sellerForm">
+                    <div class="seller-fields">
+                        <label class="input-group seller-field-full" for="shopName">
+                            <span>Pharmacy name</span>
+                            <input type="text" id="shopName" name="shopName" placeholder="e.g. Green Cross Pharmacy" autocomplete="organization" maxlength="100" required>
+                        </label>
+                        <label class="input-group seller-field-full" for="ownerName">
+                            <span>Owner or manager name</span>
+                            <input type="text" id="ownerName" name="ownerName" placeholder="Your full name" autocomplete="name" maxlength="80" required>
+                        </label>
+                        <label class="input-group" for="sellerEmail">
+                            <span>Business email</span>
+                            <input type="email" id="sellerEmail" name="email" placeholder="shop@example.com" autocomplete="email" maxlength="254" required>
+                        </label>
+                        <label class="input-group" for="sellerPhone">
+                            <span>Phone number</span>
+                            <input type="tel" id="sellerPhone" name="phone" placeholder="Your contact number" autocomplete="tel" maxlength="30" required>
+                        </label>
+                        <label class="input-group seller-field-full" for="sellerArea">
+                            <span>Shop address or area</span>
+                            <input type="text" id="sellerArea" name="area" placeholder="Street, city, or neighbourhood" autocomplete="street-address" maxlength="160" required>
+                        </label>
+                    </div>
+                    <p class="seller-privacy">Demo only: your profile and stock are saved in this browser. No password or license details are collected.</p>
+                    <button type="submit" class="login-button">Create seller profile <span aria-hidden="true">→</span></button>
+                </form>
+                <p class="login-message" id="sellerMessage" role="status" aria-live="polite"></p>
+                <p class="auth-note">This shop ID is a reference, not proof of identity. Secure accounts and pharmacy verification require a backend.</p>
+                <p class="login-footnote seller-login-link"><a href="login.html">Already using MediFinder? Log in</a></p>
+            </section>
+        </section>
+
+        <section class="seller-dashboard" id="sellerDashboard" aria-labelledby="sellerDashboardTitle" hidden>
+            <div class="seller-dashboard-heading">
+                <div>
+                    <span class="eyebrow"><span class="live-dot"></span> YOUR SELLER SPACE</span>
+                    <h2 id="sellerDashboardTitle" tabindex="-1">Your shop is ready, <span id="sellerWelcome">there</span>.</h2>
+                    <p>Keep this shop reference handy and update your availability whenever stock changes.</p>
+                </div>
+                <a class="seller-back-link" href="index.html">Explore MediFinder <span aria-hidden="true">↗</span></a>
+            </div>
+
+            <div class="seller-dashboard-grid">
+                <article class="shop-id-card">
+                    <div class="shop-id-top"><span class="seller-preview-icon" aria-hidden="true">✚</span><span class="seller-preview-status"><span></span> SELLER PROFILE</span></div>
+                    <span class="seller-preview-label">YOUR UNIQUE SHOP REFERENCE</span>
+                    <div class="shop-id-row"><code id="shopId">MF-SHOP-0000-0000000000000000</code><button id="copyShopId" type="button">Copy</button></div>
+                    <h3 id="registeredShopName">Your pharmacy</h3>
+                    <p><span id="registeredOwner">Owner</span> <span aria-hidden="true">·</span> <span id="registeredArea">Location</span></p>
+                    <p class="shop-id-note">Reference only—not a login credential or verified pharmacy license.</p>
+                </article>
+
+                <section class="inventory-panel" aria-labelledby="inventoryTitle">
+                    <div class="inventory-heading">
+                        <div><span class="seller-preview-label">KEEP LISTINGS CURRENT</span><h2 id="inventoryTitle">Medicine stock</h2></div>
+                        <span class="inventory-count"><strong id="inventoryCount">0</strong> items</span>
+                    </div>
+                    <form id="inventoryForm" class="inventory-form">
+                        <label class="input-group" for="medicineName">
+                            <span>Medicine name</span>
+                            <input type="text" id="medicineName" name="medicine" placeholder="e.g. Paracetamol 500 mg" maxlength="100" required>
+                        </label>
+                        <div class="inventory-fields-row">
+                            <label class="input-group" for="medicineStock">
+                                <span>Units in stock</span>
+                                <input type="number" id="medicineStock" name="stock" min="0" max="1000000" step="1" placeholder="0" required>
+                            </label>
+                            <label class="input-group" for="medicinePrice">
+                                <span>Price per pack (₹)</span>
+                                <input type="number" id="medicinePrice" name="price" min="0.01" max="10000000" step="0.01" placeholder="0.00" required>
+                            </label>
+                        </div>
+                        <p class="inventory-hint">Saving a medicine already on your list updates its stock and price.</p>
+                        <div class="inventory-actions">
+                            <button type="submit" class="login-button" id="saveMedicineButton">Add to stock <span aria-hidden="true">+</span></button>
+                            <button type="button" class="inventory-cancel" id="cancelMedicineEdit" hidden>Cancel edit</button>
+                        </div>
+                    </form>
+                    <p class="seller-message" id="inventoryMessage" role="status" aria-live="polite"></p>
+                    <div class="inventory-table-wrap">
+                        <table class="inventory-table">
+                            <caption class="sr-only">Your medicine stock and prices</caption>
+                            <thead><tr><th scope="col">Medicine</th><th scope="col">Stock</th><th scope="col">Price</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead>
+                            <tbody id="inventoryRows"></tbody>
+                        </table>
+                        <p class="inventory-empty" id="inventoryEmpty">Your stock list is empty. Add a medicine above to get started.</p>
+                    </div>
+                </section>
+            </div>
+            <p class="seller-demo-note">Demo only: this information stays in this browser and is not published to customers. Check applicable pharmacy rules before listing medicines.</p>
+        </section>
+    </main>
+    <script src="seller.js"></script>
+</body>
+</html>

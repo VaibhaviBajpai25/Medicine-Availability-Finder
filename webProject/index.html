@@ -3,225 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediFinder - Medicine Availability Finder </title>
+    <meta name="theme-color" content="#faf5ef">
+    <meta name="description" content="Find medicines and nearby pharmacies with MediFinder.">
+    <title>MediFinder — better care, closer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>     
-    <h2> MediFinder</h2>
+    <header class="site-header">
+        <nav class="nav-shell" aria-label="Main navigation">
+            <a class="brand" href="#home" aria-label="MediFinder home">
+                <span class="brand-mark" aria-hidden="true">+</span>
+                <span>Medi<span>Finder</span></span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle navigation">
+                <span></span><span></span>
+            </button>
+            <ul class="nav-links" id="primary-menu">
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#medicines">Medicines</a></li>
+                <li><a href="#pharmacies">Pharmacies</a></li>
+                <li><a href="seller.html">For pharmacies</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a class="nav-login" href="login.html">Log in <span aria-hidden="true">↗</span></a>
+        </nav>
+    </header>
 
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#medicines">Medicines</a></li>
-        <li><a href="#pharmacies">Pharmacies</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+    <main>
+        <section class="hero section-wrap" id="home">
+            <div class="hero-copy">
+                <span class="eyebrow"><span class="live-dot"></span> YOUR HEALTH, A LITTLE CLOSER</span>
+                <h1>Good health starts <span>nearby.</span></h1>
+                <p class="hero-description">Find the medicine you need and the pharmacy that has it. Better care, without the extra search.</p>
+                <a class="button button-primary hero-cta" href="#search">Find my medicine <span aria-hidden="true">→</span></a>
+                <a class="hero-owner-link" href="seller.html">Own a pharmacy? Join MediFinder <span aria-hidden="true">↗</span></a>
+                <div class="hero-proof">
+                    <div class="proof-avatars" aria-hidden="true"><span>AK</span><span>SM</span><span>RJ</span></div>
+                    <p><strong>Care made simpler</strong><br><span>For you and your family</span></p>
+                </div>
+            </div>
 
-    <a href="login.html">Login</a>
-</nav>
-<section id="home">
+            <div class="hero-visual" aria-label="MediFinder pharmacy availability dashboard preview">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="float-pill pill-one" aria-hidden="true">✦ &nbsp;Nearby care</div>
+                <div class="float-pill pill-two" aria-hidden="true"><span class="live-dot"></span> Your care, organized</div>
+                <div class="dashboard-card">
+                    <div class="dash-top">
+                        <div>
+                            <span class="dash-label">YOUR CARE DASHBOARD</span>
+                            <h2>Find it. Feel better.</h2>
+                        </div>
+                        <span class="dash-menu" aria-hidden="true">···</span>
+                    </div>
+                    <div class="dash-map" role="img" aria-label="Nearby pharmacy locations shown over a healthcare photo">
+                        <img class="map-photo" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="" fetchpriority="high">
+                        <div class="map-grid"></div>
+                        <div class="map-route"></div>
+                        <span class="map-pin pin-a"><span>+</span></span>
+                        <span class="map-pin pin-b"><span>+</span></span>
+                        <span class="map-pin pin-c"><span>+</span></span>
+                        <span class="map-pulse"></span>
+                        <div class="map-tag"><span class="live-dot"></span> Explore nearby care</div>
+                    </div>
+                    <div class="dash-summary">
+                        <div class="summary-icon" aria-hidden="true">✚</div>
+                        <div class="summary-copy"><strong>Care, within reach</strong><span>Local pharmacies in one place</span></div>
+                        <span class="summary-arrow" aria-hidden="true">↗</span>
+                    </div>
+                    <div class="dash-footer"><span><span class="live-dot"></span> Care, made simpler</span><span>Sample preview</span></div>
+                </div>
+                <div class="visual-glow"></div>
+            </div>
+        </section>
 
-    <h1>Find Your Medicine.<br>Find It Nearby.</h1>
+        <section class="care-dashboard section-wrap" aria-labelledby="dashboard-title">
+            <div class="dashboard-heading">
+                <div>
+                    <span class="eyebrow">A CLEARER WAY TO FIND CARE</span>
+                    <h2 id="dashboard-title">Your care dashboard</h2>
+                    <p>Helpful details, all in one place.</p>
+                </div>
+                <span class="sample-badge"><span></span> SAMPLE LISTINGS</span>
+            </div>
+            <div class="dashboard-layout">
+                <div class="dashboard-stats">
+                    <article class="stat-card stat-card-primary tilt-surface">
+                        <span class="stat-icon" aria-hidden="true">⌖</span>
+                        <span class="stat-label">PHARMACY EXAMPLES</span>
+                        <strong id="pharmacyCount">03</strong>
+                        <span class="stat-footnote">Across the listings below</span>
+                        <span class="stat-orb" aria-hidden="true"></span>
+                    </article>
+                    <article class="stat-card tilt-surface">
+                        <span class="stat-icon stat-icon-coral" aria-hidden="true">◷</span>
+                        <span class="stat-label">MARKED OPEN</span>
+                        <strong id="openPharmacyCount">02</strong>
+                        <span class="stat-footnote">Confirm hours with the pharmacy</span>
+                    </article>
+                    <button class="stat-card stat-card-saved tilt-surface" id="savedDashboardCard" type="button" aria-label="Show saved medicines">
+                        <span class="stat-icon stat-icon-rose" aria-hidden="true">♡</span>
+                        <span class="stat-label">YOUR SAVED MEDICINES</span>
+                        <strong id="dashboardFavoriteCount">00</strong>
+                        <span class="stat-footnote">Saved on this device <span aria-hidden="true">→</span></span>
+                    </button>
+                </div>
+                <div class="dashboard-tools">
+                    <div class="quick-find-heading">
+                        <div><span class="tool-eyebrow">QUICK FIND</span><h3>Search a popular pick</h3></div>
+                        <span class="quick-find-symbol" aria-hidden="true">✳</span>
+                    </div>
+                    <div class="quick-searches" aria-label="Quick medicine searches">
+                        <button type="button" data-quick-search="Dolo 650"><span class="quick-dot dot-coral"></span>Dolo 650 <span aria-hidden="true">↗</span></button>
+                        <button type="button" data-quick-search="Cetirizine"><span class="quick-dot dot-lilac"></span>Cetirizine <span aria-hidden="true">↗</span></button>
+                        <button type="button" data-quick-search="Crocin"><span class="quick-dot dot-blue"></span>Crocin <span aria-hidden="true">↗</span></button>
+                    </div>
+                    <div class="recent-searches">
+                        <span>RECENT SEARCHES</span>
+                        <div id="recentSearchList"><p>Your searches will show up here.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <p>
-        Search for medicines and find nearby pharmacies
-        with availability information.
-    </p>
+        <section class="search-section section-wrap" id="search">
+            <div class="search-heading">
+                <span class="eyebrow">START YOUR SEARCH</span>
+                <h2>What do you need today?</h2>
+                <p>Search a medicine and choose your area to get started.</p>
+            </div>
+            <form class="search-panel" id="medicineSearch">
+                <label class="search-field">
+                    <span class="field-icon" aria-hidden="true">⌕</span>
+                    <span class="sr-only">Medicine name</span>
+                    <input id="medicineQuery" type="search" placeholder="Medicine name (e.g. paracetamol)" autocomplete="off">
+                </label>
+                <span class="field-divider" aria-hidden="true"></span>
+                <label class="search-field location-field">
+                    <span class="field-icon location-icon" aria-hidden="true">⌖</span>
+                    <span class="sr-only">Your location</span>
+                    <input type="text" placeholder="Your area or postcode" autocomplete="address-level2">
+                </label>
+                <button class="button button-primary search-button" type="submit">Search medicines <span aria-hidden="true">→</span></button>
+            </form>
+            <p class="search-message" id="searchMessage" role="status" aria-live="polite"></p>
+        </section>
 
-    <button>Find Medicine</button>
-    <section id="search">
+        <section class="content-section section-wrap" id="medicines">
+            <div class="section-heading">
+                <div><span class="eyebrow">A GOOD PLACE TO START</span><h2>Popular medicines</h2></div>
+                <a class="text-link" href="#search">Search all medicines <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="medicine-toolbar">
+                <div class="category-filters" role="group" aria-label="Filter medicines">
+                    <button class="filter-chip is-active" type="button" data-category="all" aria-pressed="true">All medicines</button>
+                    <button class="filter-chip" type="button" data-category="pain-fever" aria-pressed="false">Pain &amp; fever</button>
+                    <button class="filter-chip" type="button" data-category="allergy" aria-pressed="false">Allergy</button>
+                    <button class="filter-chip" type="button" data-category="prescription" aria-pressed="false">Prescription</button>
+                    <button class="filter-chip saved-filter" type="button" data-favorites-toggle aria-pressed="false">♡ Saved <span id="favoriteCount">0</span></button>
+                </div>
+                <p class="filter-status" id="filterStatus" role="status" aria-live="polite">Showing all 4 medicines.</p>
+            </div>
+            <div class="medicine-grid">
+                <article class="medicine-card" data-category="pain-fever" data-medicine-id="dolo-650">
+                    <div class="medicine-art art-peach" aria-hidden="true"><span class="capsule capsule-peach"></span></div>
+                    <div class="medicine-info"><span class="medicine-category">PAIN &amp; FEVER</span><h3>Dolo 650</h3><p>Paracetamol</p><button class="favorite-button" type="button" data-favorite aria-label="Save Dolo 650" aria-pressed="false">♡</button><a href="#search" class="card-link">Find nearby <span aria-hidden="true">↗</span></a></div>
+                </article>
+                <article class="medicine-card" data-category="pain-fever" data-medicine-id="crocin">
+                    <div class="medicine-art art-blue" aria-hidden="true"><span class="capsule capsule-blue"></span></div>
+                    <div class="medicine-info"><span class="medicine-category">PAIN &amp; FEVER</span><h3>Crocin</h3><p>Paracetamol</p><button class="favorite-button" type="button" data-favorite aria-label="Save Crocin" aria-pressed="false">♡</button><a href="#search" class="card-link">Find nearby <span aria-hidden="true">↗</span></a></div>
+                </article>
+                <article class="medicine-card" data-category="allergy" data-medicine-id="cetirizine">
+                    <div class="medicine-art art-lilac" aria-hidden="true"><span class="capsule capsule-lilac"></span></div>
+                    <div class="medicine-info"><span class="medicine-category">ALLERGY CARE</span><h3>Cetirizine</h3><p>Antihistamine</p><button class="favorite-button" type="button" data-favorite aria-label="Save Cetirizine" aria-pressed="false">♡</button><a href="#search" class="card-link">Find nearby <span aria-hidden="true">↗</span></a></div>
+                </article>
+                <article class="medicine-card" data-category="prescription" data-medicine-id="azithromycin">
+                    <div class="medicine-art art-green" aria-hidden="true"><span class="capsule capsule-green"></span></div>
+                    <div class="medicine-info"><span class="medicine-category">PRESCRIPTION</span><h3>Azithromycin</h3><p>Antibiotic</p><button class="favorite-button" type="button" data-favorite aria-label="Save Azithromycin" aria-pressed="false">♡</button><a href="#search" class="card-link">Find nearby <span aria-hidden="true">↗</span></a></div>
+                </article>
+            </div>
+            <p class="medicine-empty" id="medicineEmpty" hidden>No medicines match these filters. Try another category or save a medicine first.</p>
+            <p class="medicine-disclaimer">Medicine information is for discovery only. Always follow the advice of a qualified healthcare professional.</p>
+        </section>
 
-    <h2>Search Medicine</h2>
+        <section class="pharmacy-section" id="pharmacies">
+            <div class="section-wrap">
+                <div class="section-heading">
+                    <div><span class="eyebrow">CARE AROUND THE CORNER</span><h2>Nearby pharmacies</h2></div>
+                    <a class="text-link" href="#search">Explore your area <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="pharmacy-grid">
+                    <article class="pharmacy-card">
+                        <div class="pharmacy-top"><span class="pharmacy-icon" aria-hidden="true">✚</span><span class="availability available"><span></span> Open now</span></div>
+                        <h3>Apollo Pharmacy</h3><p class="pharmacy-meta"><span>★ 4.5</span><span>·</span> 1.2 km away</p>
+                        <div class="stock-row"><span>Medicine availability</span><strong>Available</strong></div>
+                        <a href="#search" class="pharmacy-link">View pharmacy <span aria-hidden="true">→</span></a>
+                    </article>
+                    <article class="pharmacy-card">
+                        <div class="pharmacy-top"><span class="pharmacy-icon icon-cyan" aria-hidden="true">✚</span><span class="availability available"><span></span> Open now</span></div>
+                        <h3>MedPlus</h3><p class="pharmacy-meta"><span>★ 4.3</span><span>·</span> 2.1 km away</p>
+                        <div class="stock-row"><span>Medicine availability</span><strong>Available</strong></div>
+                        <a href="#search" class="pharmacy-link">View pharmacy <span aria-hidden="true">→</span></a>
+                    </article>
+                    <article class="pharmacy-card">
+                        <div class="pharmacy-top"><span class="pharmacy-icon icon-amber" aria-hidden="true">✚</span><span class="availability closed"><span></span> Closed</span></div>
+                        <h3>City Medical Store</h3><p class="pharmacy-meta"><span>★ 4.1</span><span>·</span> 2.8 km away</p>
+                        <div class="stock-row"><span>Medicine availability</span><strong class="limited">Limited</strong></div>
+                        <a href="#search" class="pharmacy-link">View pharmacy <span aria-hidden="true">→</span></a>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-    <p>
-        Enter the medicine name to find nearby pharmacies.
-    </p>
+        <section class="about-section section-wrap" id="about">
+            <div class="about-heading"><span class="eyebrow">A LITTLE LESS WORRY</span><h2>Finding care shouldn't be hard.</h2><p>MediFinder brings your medicine search and local pharmacies together, so you can spend less time looking and more time feeling good.</p></div>
+            <div class="benefit-grid">
+                <article class="benefit-card"><span aria-hidden="true">⌕</span><h3>Simple search</h3><p>Look up the medicines you need in just a few moments.</p></article>
+                <article class="benefit-card"><span aria-hidden="true">⌖</span><h3>Care close by</h3><p>Explore pharmacies near the area that works for you.</p></article>
+                <article class="benefit-card"><span aria-hidden="true">◷</span><h3>Quick clarity</h3><p>See useful availability details at a glance.</p></article>
+            </div>
+        </section>
 
-    <input 
-        type="text" 
-        placeholder="🔍 Enter medicine name"
-    >
+        <section class="contact-section section-wrap" id="contact">
+            <div class="contact-copy"><span class="eyebrow">WE'RE HERE TO HELP</span><h2>Have a question?</h2><p>Send us a note and we'll be happy to hear from you.</p></div>
+            <form class="contact-form" id="contactForm">
+                <div class="contact-fields">
+                    <label><span class="sr-only">Your name</span><input type="text" name="name" placeholder="Your name" required></label>
+                    <label><span class="sr-only">Your email</span><input type="email" name="email" placeholder="Your email" required></label>
+                </div>
+                <label><span class="sr-only">Your message</span><textarea name="message" rows="3" placeholder="How can we help?" required></textarea></label>
+                <div class="contact-submit-row"><p id="contactMessage" role="status" aria-live="polite"></p><button class="button button-primary" type="submit">Send message <span aria-hidden="true">→</span></button></div>
+            </form>
+        </section>
+    </main>
 
-    <input 
-        type="text" 
-        placeholder="📍 Enter your location"
-    >
-
-    <button>Search</button>
-
-</section>
-<section id="medicines">
-
-    <h2>Popular Medicines</h2>
-
-    <p>Quickly explore commonly searched medicines.</p>
-
-    <div>
-
-        <div class="medicine-card">
-            <h3>💊 Dolo 650</h3>
-            <p>Paracetamol</p>
-            <p>Commonly used for pain and fever.</p>
-            <button>View Details</button>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">+</span><span>Medi<span>Finder</span></span></a>
+            <p>Find medicines. Find pharmacies. Feel better.</p>
+            <span>© 2026 MediFinder. Demo listings—confirm stock with your pharmacy.</span>
         </div>
-
-        <div class="medicine-card">
-            <h3>💊 Crocin</h3>
-            <p>Paracetamol</p>
-            <p>Commonly used for pain and fever.</p>
-            <button>View Details</button>
-        </div>
-
-        <div class="medicine-card">
-            <h3>💊 Cetirizine</h3>
-            <p>Antihistamine</p>
-            <p>Used for allergy symptoms.</p>
-            <button>View Details</button>
-        </div>
-
-        <div class="medicine-card">
-            <h3>💊 Azithromycin</h3>
-            <p>Antibiotic</p>
-            <p>Prescription medicine.</p>
-            <button>View Details</button>
-        </div>
-
-    </div>
-
-</section>
-<section id="pharmacies">
-
-    <h2>Nearby Pharmacies</h2>
-
-    <p>Find pharmacies near your location.</p>
-
-    <div>
-
-         <div class="pharmacy-card">
-            <h3>🏥 Apollo Pharmacy</h3>
-            <p>⭐ 4.5 Rating</p>
-            <p>📍 1.2 km away</p>
-            <p>🟢 Open</p>
-            <p>Medicine Availability: Available</p>
-
-            <button>View Pharmacy</button>
-        </div>
-
-
-        <div class="pharmacy-card">
-            <h3>🏥 MedPlus</h3>
-            <p>⭐ 4.3 Rating</p>
-            <p>📍 2.1 km away</p>
-            <p>🟢 Open</p>
-            <p>Medicine Availability: Available</p>
-
-            <button>View Pharmacy</button>
-        </div>
-
-
-        <div class="pharmacy-card">
-            <h3>🏥 City Medical Store</h3>
-            <p>⭐ 4.1 Rating</p>
-            <p>📍 2.8 km away</p>
-            <p>🔴 Closed</p>
-            <p>Medicine Availability: Limited</p>
-
-            <button>View Pharmacy</button>
-        </div>
-
-    </div>
-
-</section>
-<section id="about">
-
-    <h2>Why Choose MediFinder?</h2>
-
-    <p>
-        MediFinder makes it easier to search for medicines
-        and discover nearby pharmacies.
-    </p>
-
-
-    <div>
-
-        <div>
-            <h3>🔍 Easy Search</h3>
-            <p>
-                Quickly search for medicines by name.
-            </p>
-        </div>
-
-
-        <div>
-            <h3>📍 Nearby Pharmacies</h3>
-            <p>
-                Discover pharmacies near your location.
-            </p>
-        </div>
-
-
-        <div>
-            <h3>⚡ Quick Results</h3>
-            <p>
-                Get pharmacy and availability information quickly.
-            </p>
-        </div>
-
-
-        <div>
-            <h3>📱 Responsive</h3>
-            <p>
-                Access MediFinder on desktop, tablet and mobile.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-<section id="contact">
-
-    <h2>Contact Us</h2>
-
-    <p>
-        Have a question or feedback? Get in touch with us.
-    </p>
-
-    <form>
-
-        <input 
-            type="text" 
-            placeholder="Your Name"
-        >
-
-        <input 
-            type="email" 
-            placeholder="Your Email"
-        >
-
-        <textarea 
-            placeholder="Your Message">
-        </textarea>
-
-        <button type="submit">Send Message</button>
-
-    </form>
-
-</section>
-<footer>
-
-    <h3>💊 MediFinder</h3>
-
-    <p>
-        Find Medicines. Find Pharmacies. Find Nearby.
-    </p>
-
-    <p>
-        © 2026 MediFinder. All Rights Reserved.
-    </p>
-
-</footer>
-
-</section>
+    </footer>
+    <script src="app.js"></script>
 </body>
 </html>
